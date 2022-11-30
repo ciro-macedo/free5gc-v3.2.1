@@ -92,8 +92,9 @@ git clone --recursive -b main -j `nproc` https://github.com/ciro-macedo/free5gc-
 ``
 
 ### Config Dev Mode Steps
-
-To configure project to local debu just run ansible playbook (sudo access is need):
+1) Open project with Goland Jetbrains.
+2) Download go dependencies.
+3) To configure project to local debu just run ansible playbook (sudo access is need):
 
 ``
 ansible-playbook -K DevelopmentEnvironmentConfigByAnsible.yml 
