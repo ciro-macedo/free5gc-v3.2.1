@@ -91,7 +91,17 @@ sudo systemctl enable mongod
 git clone --recursive -b main -j `nproc` https://github.com/ciro-macedo/free5gc-v3.2.1.git
 ``
 
-### Start NFs Functions
+### Config Dev Mode Steps
+
+To configure project to local debu just run ansible playbook (sudo access is need):
+
+``
+ansible-playbook -K DevelopmentEnvironmentConfigByAnsible.yml 
+``
+
+
+
+### Start Order NFs Functions
 ``
 NRF > UDR > UDM > AUSF > NSSF > AMF > PCF > UPF (sudo -E ./bin/free5gc-upfd) > SMF > SERVER-WEB > SERVER-FRONT-END ( REACT_APP_HTTP_API_URL=http://core_ip_address:5000/api PORT=3000 yarn start )
 ``
