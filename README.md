@@ -39,6 +39,43 @@ free5GC is now under [Apache 2.0](https://github.com/free5gc/free5gc/blob/master
 
 ## Additional Information
 
+### Dependencies
+####  User-plane Supporting Packages
+``
+sudo apt -y update
+sudo apt -y install git gcc g++ cmake autoconf libtool pkg-config libmnl-dev libyaml-dev
+``
+####  MongoDB (Ubuntu 20.04 [Focal])
+
+Import the public key used by the package management system
+``
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+``
+Create the ``/etc/apt/sources.list.d/mongodb-org-6.0.list`` file for Ubuntu 20.04 (Focal)
+``
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+``
+Reload local package database
+``
+sudo apt-get update
+``
+Install the MongoDB packages
+``
+sudo apt-get install -y mongodb-org
+``
+Start MongoDB
+``
+sudo systemctl start mongod
+``
+Verify that MongoDB has started successfully
+``
+sudo systemctl status mongod
+``
+Ensure that MongoDB will start following a system reboot
+``
+sudo systemctl enable mongod
+``
+
 ### Git Clone with submodules
 ``
 git clone --recursive -b main -j `nproc` https://github.com/ciro-macedo/free5gc-v3.2.1.git
