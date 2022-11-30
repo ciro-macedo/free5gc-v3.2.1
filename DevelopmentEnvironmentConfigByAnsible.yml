@@ -1,0 +1,140 @@
+---
+-   hosts: 127.0.0.1
+    connection: local
+    become: yes
+    remote_user: root
+    vars:
+
+
+    tasks:
+
+      - name: Create NRF local config dir's
+        shell: mkdir NFs/nrf/config
+        ignore_errors: true
+
+      - name: Create UDR local config dir's
+        shell: mkdir NFs/udr/config
+        ignore_errors: true
+
+      - name: Create UDM local config dir's
+        shell: mkdir NFs/udm/config
+        ignore_errors: true
+
+      - name: Create AUSF local config dir's
+        shell: mkdir NFs/ausf/config
+        ignore_errors: true
+
+      - name: Create NSSF local config dir's
+        shell: mkdir NFs/nssf/config
+        ignore_errors: true
+
+      - name: Create AMF local config dir's
+        shell: mkdir NFs/amf/config
+        ignore_errors: true
+
+      - name: Create PCF local config dir's
+        shell: mkdir NFs/pcf/config
+        ignore_errors: true
+
+      - name: Create UPF local config dir's
+        shell: mkdir NFs/upf/config
+        ignore_errors: true
+
+      - name: Create SMF local config dir's
+        shell: mkdir NFs/smf/config
+        ignore_errors: true
+
+      - name: Create N3IWF local config dir's
+        shell: mkdir NFs/n3iwf/config
+        ignore_errors: true
+
+      #Copy Config files
+      - name: Check local nrf config file exists
+        stat:
+          path: "NFs/nrf/config/nrfcfg.yaml"
+        register: local_nrfcfg
+
+      - name: Copy nrf config file
+        shell: cp config/nrfcfg.yaml NFs/nrf/config
+        when: not local_nrfcfg.stat.exists
+
+      - name: Check local udr config file exists
+        stat:
+          path: "NFs/udr/config/nrfcfg.yaml"
+        register: local_udrcfg
+
+      - name: Copy udr config file
+        shell: cp config/udrcfg.yaml NFs/udr/config
+        when: not local_udrcfg.stat.exists
+
+      - name: Check local udm config file exists
+        stat:
+          path: "NFs/udm/config/nrfcfg.yaml"
+        register: local_udmcfg
+
+      - name: Copy udm config file
+        shell: cp config/udmcfg.yaml NFs/udm/config
+        when: not local_udmcfg.stat.exists
+
+      - name: Check local AUSF config file exists
+        stat:
+          path: "NFs/ausf/config/ausfcfg.yaml"
+        register: local_ausfcfg
+
+      - name: Copy AUSF config file
+        shell: cp config/ausfcfg.yaml NFs/ausf/config
+        when: not local_ausfcfg.stat.exists
+
+      - name: Check local NSSF config file exists
+        stat:
+          path: "NFs/nssf/config/nssfcfg.yaml"
+        register: local_nssfcfg
+
+      - name: Copy NSSF config file
+        shell: cp config/nssfcfg.yaml NFs/nssf/config
+        when: not local_nssfcfg.stat.exists
+
+      - name: Check local AMF config file exists
+        stat:
+          path: "NFs/amf/config/amfcfg.yaml"
+        register: local_amfcfg
+
+      - name: Copy AMF config file
+        shell: cp config/amfcfg.yaml NFs/amf/config
+        when: not local_amfcfg.stat.exists
+
+      - name: Check local PCF config file exists
+        stat:
+          path: "NFs/pcf/config/pcfcfg.yaml"
+        register: local_pcfcfg
+
+      - name: Copy PCF config file
+        shell: cp config/pcfcfg.yaml NFs/pcf/config
+        when: not local_pcfcfg.stat.exists
+
+      - name: Check local UPF config file exists
+        stat:
+          path: "NFs/upf/config/upfcfg.yaml"
+        register: local_upfcfg
+
+      - name: Copy UPF config file
+        shell: cp config/upfcfg.yaml NFs/upf/config
+        when: not local_upfcfg.stat.exists
+
+      - name: Check local SMF config file exists
+        stat:
+          path: "NFs/smf/config/smfcfg.yaml"
+        register: local_smfcfg
+
+      - name: Copy SMF config file
+        shell: cp config/smfcfg.yaml NFs/smf/config
+        when: not local_smfcfg.stat.exists
+
+      - name: Check local N3IWF config file exists
+        stat:
+          path: "NFs/n3iwf/config/n3iwfcfg.yaml"
+        register: local_n3iwfcfg
+
+      - name: Copy N3IWF config file
+        shell: cp config/n3iwfcfg.yaml NFs/n3iwf/config
+        when: not local_n3iwfcfg.stat.exists

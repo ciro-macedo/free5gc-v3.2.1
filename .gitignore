@@ -26,6 +26,10 @@ config/test/smfcfg.test.yaml
 # build
 bin/
 
+# NFs
+webconsole
+NFs/nrf/
+
 # release
 release/src
 
