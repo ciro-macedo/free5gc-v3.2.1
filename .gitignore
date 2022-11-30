@@ -26,9 +26,6 @@ config/test/smfcfg.test.yaml
 # build
 bin/
 
-# NFs
-webconsole
-NFs/nrf/
 
 # release
 release/src
@@ -39,3 +36,13 @@ webconsole/public
 
 packages/
 free5gc.zip
+/NFs/amf/
+/NFs/nrf/
+/NFs/ausf/
+/NFs/n3iwf/
+/NFs/nrf/
+/NFs/nssf/
+/NFs/udr/
+/NFs/udm/
+/NFs/upf/
+/webconsole
