@@ -44,7 +44,7 @@ free5GC is now under [Apache 2.0](https://github.com/free5gc/free5gc/blob/master
 
 ``
 sudo apt -y update
-sudo apt -y install git gcc g++ cmake autoconf libtool pkg-config libmnl-dev libyaml-dev
+sudo apt -y install git gcc g++ cmake autoconf libtool pkg-config libmnl-dev libyaml-dev ansible
 ``
 
 ####  MongoDB (Ubuntu 20.04 [Focal])
