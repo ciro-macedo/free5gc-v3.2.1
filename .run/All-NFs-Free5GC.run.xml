@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="All-NFs-Free5GC" type="CompoundRunConfigurationType">
+    <toRun name="A-NRF" type="GoApplicationRunConfiguration" />
+    <toRun name="B-UDR" type="GoApplicationRunConfiguration" />
+    <toRun name="C-UDM" type="GoApplicationRunConfiguration" />
+    <toRun name="D-AUSF" type="GoApplicationRunConfiguration" />
+    <toRun name="E-NSSF" type="GoApplicationRunConfiguration" />
+    <toRun name="F-AMF" type="GoApplicationRunConfiguration" />
+    <toRun name="G-PCF" type="GoApplicationRunConfiguration" />
+    <toRun name="H-UPF" type="GoApplicationRunConfiguration" />
+    <toRun name="I-SMF" type="GoApplicationRunConfiguration" />
+    <toRun name="J-NWDAF" type="GoApplicationRunConfiguration" />
+    <method v="2" />
+  </configuration>
+</component>
