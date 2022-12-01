@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="J-NWDAF" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="free5gc-v3.2.1" />
+    <working_directory value="$PROJECT_DIR$/NFs/nwdaf" />
+    <kind value="FILE" />
+    <directory value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$/NFs/nwdaf/nwdaf.go" />
+    <method v="2" />
+  </configuration>
+</component>

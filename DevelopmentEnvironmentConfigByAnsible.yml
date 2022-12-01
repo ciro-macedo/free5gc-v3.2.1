@@ -130,6 +130,16 @@
         shell: cp config/smfcfg.yaml NFs/smf/config
         when: not local_smfcfg.stat.exists
 
+
+      - name: Check local ueRouting SMF config file exists
+        stat:
+          path: "NFs/smf/config/uerouting.yaml"
+        register: local_smfuerouting
+
+      - name: Copy ueRouting SMF config file
+        shell: cp config/uerouting.yaml NFs/smf/config
+        when: not local_smfuerouting.stat.exists
+
       - name: Check local N3IWF config file exists
         stat:
           path: "NFs/n3iwf/config/n3iwfcfg.yaml"
@@ -138,3 +148,12 @@
       - name: Copy N3IWF config file
         shell: cp config/n3iwfcfg.yaml NFs/n3iwf/config
         when: not local_n3iwfcfg.stat.exists
+
+      - name: Check local NWDAF config file exists
+        stat:
+          path: "NFs/nwdaf/config/nwdafcfg.yaml"
+        register: local_nwdafcfg
+
+      - name: Copy NWDAF config file
+        shell: cp config/nwdafcfg.yaml NFs/nwdaf/config
+        when: not local_nwdafcfg.stat.exists

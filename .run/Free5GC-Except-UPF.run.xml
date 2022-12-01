@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Free5GC-Except-UPF" type="CompoundRunConfigurationType">
+    <toRun name="1-NRF" type="GoApplicationRunConfiguration" />
+    <toRun name="2-UDR" type="GoApplicationRunConfiguration" />
+    <toRun name="3-UDM" type="GoApplicationRunConfiguration" />
+    <toRun name="4-AUSF" type="GoApplicationRunConfiguration" />
+    <toRun name="5-NSSF" type="GoApplicationRunConfiguration" />
+    <toRun name="6-AMF" type="GoApplicationRunConfiguration" />
+    <toRun name="7-PCF" type="GoApplicationRunConfiguration" />
+    <method v="2" />
+  </configuration>
+</component>
