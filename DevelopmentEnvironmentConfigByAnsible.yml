@@ -157,3 +157,31 @@
       - name: Copy NWDAF config file
         shell: cp config/nwdafcfg.yaml NFs/nwdaf/config
         when: not local_nwdafcfg.stat.exists
+
+      #TLs N3IWF
+      - name: N3IWF TLSs DIR
+        stat:
+          path: "NFs/n3iwf/config/TLS"
+        register: local_n3iwftls_dir
+
+      - name: MKdir
+        shell: mkdir NFs/n3iwf/config/TLS
+        when: not local_n3iwftls_dir.stat.exists
+
+      - name: N3IWF KEY file
+        stat:
+          path: "NFs/n3iwf/config/TLS/n3iwf.key"
+        register: local_n3iwf_keyfile
+
+      - name: Copy N3IWF KEY file
+        shell: cp config/TLS/n3iwf.key NFs/n3iwf/config/TLS
+        when: not local_n3iwf_keyfile.stat.exists
+
+      - name: N3IWF PEM file
+        stat:
+          path: "NFs/n3iwf/config/TLS/n3iwf.pem"
+        register: local_n3iwf_pemfile
+
+      - name: Copy N3IWF PEM file
+        shell: cp config/TLS/n3iwf.pem NFs/n3iwf/config/TLS
+        when: not local_n3iwf_pemfile.stat.exists
