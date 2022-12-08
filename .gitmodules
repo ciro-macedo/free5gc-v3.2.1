@@ -34,3 +34,6 @@
 [submodule "NFs/nwdaf"]
 	path = NFs/nwdaf
 	url = https://github.com/ciromacedo/nwdaf.git
+[submodule "NFs/UE-non3GPP"]
+	path = NFs/UE-non3GPP
+	url = https://github.com/LABORA-INF-UFG/UE-non3GPP.git

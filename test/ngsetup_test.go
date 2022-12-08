@@ -57,8 +57,13 @@ func init() {
 	for _, arg := range os.Args {
 		values := strings.Split(arg, "=")
 		for k, v := range values {
+			fmt.Printf(v)
 			if v == "-test.run" {
-				testID = values[k+1]
+				if len(values) > 1 {
+					testID = values[k+1]
+				} else {
+					testID = "TestCN"
+				}
 				fmt.Printf("Run %s\n", testID)
 			}
 		}
